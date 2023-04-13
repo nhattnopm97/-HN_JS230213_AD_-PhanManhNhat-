@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 function WorldCounter() {
   const [allLetter, setAllLetterld] = useState("");
-  const [world, setWorld] = useState("");
-  const [letter, setLetter] = useState("");
-  const [paragraph, setParagraph] = useState("");
+  const [world, setWorld] = useState("0");
+  const [letter, setLetter] = useState("0");
+  const [paragraph, setParagraph] = useState("0");
   const handleOnChange = (letter) => {
     setAllLetterld(letter);
     const countSpace = allLetter.replace(/\s/g, "").length;
@@ -49,6 +49,7 @@ function WorldCounter() {
         id=""
         cols="30"
         rows="10"
+        placeholder="Enter? Paste your text here"
       ></textarea>
       <div>
         <button onClick={handleUpcase}>Click To Uppercase</button>
